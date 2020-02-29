@@ -1,0 +1,23 @@
+{
+    "logicPackName": "Wim Steenbakker Website",
+    "routes": {
+        "/": {
+            "controller": "wms_index",
+            "method": "index",
+            "importance": 10
+        }
+    },
+    "editors": {
+        "record_types": {
+            "wms_page": {
+                "primary": [
+                    {
+                        "fieldslug": "native_textfield",
+                        "exportid": "content",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    }
+}

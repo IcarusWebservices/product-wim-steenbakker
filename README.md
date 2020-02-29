@@ -1,2 +1,3 @@
 # product-wim-steenbakker
-Klant: Wim Steenbakker
+Klant: Wim Steenbakker.
+
