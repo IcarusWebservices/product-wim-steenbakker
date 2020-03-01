@@ -17,6 +17,29 @@
                         "required": true
                     }
                 ]
+            },
+            "wms_event": {
+                "primary": [
+                    {
+                        "fieldslug": "native_textfield",
+                        "exportid": "description",
+                        "required": true
+                    },
+                    {
+                        "fieldslug": "wms_event",
+                        "exportid": "eventdata",
+                        "required": true
+                    }
+                ]
+            },
+            "wms_gallery": {
+                "primary": [
+                    {
+                        "fieldslug": "wms_gallery",
+                        "exportid": "gallery",
+                        "required": true
+                    }
+                ]
             }
         }
     }
