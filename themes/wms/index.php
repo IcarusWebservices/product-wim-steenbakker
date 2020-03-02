@@ -165,7 +165,7 @@
             request_script('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'),
             request_script('https://kit.fontawesome.com/9d8cef91c5.js')
         ];
-        $this->requested_body_scripts = [request_script(ph_pattern('%THEME%/js/main.js'))];
+        $this->requested_body_scripts = [request_script(resource_resolve(RES_THEME, $theme_folder, '/js/main.js'))];
         $this->requested_title = "Home - Wim Steenbakker";
         $this->active_id = 'index';
     }
