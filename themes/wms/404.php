@@ -1,5 +1,6 @@
 <?php
     global $request;
+    global $theme_folder;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,14 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?= uri_resolve('/data/themes/'. $theme_folder .'/css/error.css') ?>">
+    <link rel="stylesheet" href="<?= resource_resolve(RES_THEME, $theme_folder, '/css/error.css') ?>">
     <title>This page was not found - <?= get_template_record('website_name') ?></title>
 </head>
 <body>
     <main>
         <section class="error-grid">
             <div class="error-illustration">
-                <img class="error-illustration-img" src="<?= uri_resolve('/data/themes/'. $theme_folder .'/img/error_illustration_512.jpg') ?>" alt="Error">
+                <img class="error-illustration-img" src="<?= resource_resolve(RES_THEME, $theme_folder, '/img/error_illustration_512.jpg') ?>" alt="Error">
             </div>
             <div class="error">
                 <h1>404</h1>

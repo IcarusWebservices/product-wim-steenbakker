@@ -1,27 +1,21 @@
 const nav = document.querySelector('.navbar');
-const searchButton = document.querySelector('#search-button');
-const searchInput = document.querySelector('#search-input');
-const parallaxImg = document.querySelectorAll('.img-parallax');
+// const parallaxImg = document.querySelectorAll('.img-parallax');
 
 window.onscroll = () => {
-    this.scrollY <= 10 ? nav.classList.remove('scroll') : nav.classList.add('scroll');
+    this.scrollY <= 50 ? nav.classList.remove('scroll') : nav.classList.add('scroll');
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (this.scrollY <= 10) {
+    if (this.scrollY <= 50) {
         nav.classList.add('scroll');
     }
 });
-
-searchButton.onclick = function () {
-    searchInput.focus();
-}
-
 
 
 // ------------------------------
 // Parallax scrolling!
 // ------------------------------
+/*
 $('.img-parallax').each(function () {
     var img = $(this);
     var imgParent = $(this).parent();
@@ -56,7 +50,7 @@ $('.img-parallax').each(function () {
         }
     });
 });
-
+*/
 
 
 // Music Player

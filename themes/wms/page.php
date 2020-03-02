@@ -9,7 +9,8 @@ class WMS_SinglePage_Template extends PH_Template {
     public function render($input)
     {
         get_template_part('header.php', [
-            "active_id" => $this->active_id
+            "active_id" => $this->active_id,
+            "has_navbar" => $this->has_navbar
         ]);
 
         $records = PH_Query::records([
@@ -23,21 +24,24 @@ class WMS_SinglePage_Template extends PH_Template {
             ?>
 
             <header class="banner low">
-                <img src="https://jezz.tech/sites/wim/assets/img/kerstconcert.jpg" data-speed="-0.75" class="img-parallax">
-                <div class="banner-text abs-centered">
+                <img src="https://jezz.tech/sites/wim/assets/img/cor_bakker_mythe.jpg" data-speed="-0.75" class="img-parallax">
+                <div class="banner-content abs-centered">
                     <h1 class="title"><?= ucfirst($input->slug) ?></h1>
                 </div>
             </header>
 
             <main>
                 <section>
-                    <div class="article-card">
+                    <div class="article-container">
                         <?php demo_render_post_full($record); ?>
                     </div>    
                 </section>
             </main>
             <?php
-            $this->requested_title = $record->title . ' - Website';
+            
+            get_template_part('footer.php', []);
+
+            $this->requested_title = $record->title . ' - Wim Steenbakker';
         }
         
     }
@@ -46,15 +50,19 @@ class WMS_SinglePage_Template extends PH_Template {
     {
         global $theme_folder;
         $this->requested_stylesheets = [
-            request_stylesheet(uri_resolve('/data/themes/'. $theme_folder .'/css/wms.css')),
-            request_stylesheet(uri_resolve('/data/themes/'. $theme_folder .'/css/musicplayer.css'))
+            request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/wms.css')),
+            request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/components.css')),
+            request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/musicplayer.css'))
         ];
         $this->requested_header_scripts = [
             request_script('https://kit.fontawesome.com/9d8cef91c5.js'),
             request_script('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         ];
-        $this->requested_body_scripts = [request_script(ph_pattern('%THEME%/js/main.js'))];
-    
+        $this->requested_body_scripts = [
+            request_script(resource_resolve(RES_THEME, $theme_folder, '/js/main.js'))
+        ];
+        $this->active_id = 1;
+        $this->has_navbar = false;
     }
 
 }
