@@ -5,6 +5,12 @@
             "controller": "wms_index",
             "method": "index",
             "importance": 10
+        },
+        "/:slug": {
+            "controller": "wms_page",
+            "method": "page",
+            "importance": 10,
+            "checkerFunction": "checkpage"
         }
     },
     "editors": {
