@@ -29,8 +29,8 @@
                     <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, corrupti.</p>
                     <br>
-                    <a class="button-2 alt" href="contact">Meer over educatie</a>
-                    <a class="button-2" href="contact">Meer over optredens</a>
+                    <a class="button-2 alt" href="/wim/educatie">Meer over educatie</a>
+                    <a class="button-2" href="/wim/optredens">Meer over optredens</a>
                 </div>
             </div>
             <div class="scroll-down">
