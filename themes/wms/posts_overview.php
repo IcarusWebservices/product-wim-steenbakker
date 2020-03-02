@@ -39,6 +39,9 @@ class WMS_PostsOverview_Template extends PH_Template {
             </section>
         </main>
         <?php
+        
+        get_template_part('footer.php', []);
+
         $this->requested_title = "Posts";
     }
 
@@ -46,10 +49,11 @@ class WMS_PostsOverview_Template extends PH_Template {
     {
         global $theme_folder;
         $this->requested_stylesheets = [
-            request_stylesheet(uri_resolve('/data/themes/' . $theme_folder . '/css/wms.css'))
+            request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/wms.css')),
+            request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/components.css'))
         ];
         $this->requested_body_scripts = [
-            request_script(ph_pattern('%THEME%/js/main.js'))
+            request_script(resource_resolve(RES_THEME, $theme_folder, '/js/main.js'))
         ];
     
     }

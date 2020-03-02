@@ -1,0 +1,326 @@
+/* ----------------------------------------
+Containers
+---------------------------------------- */
+.container {
+  line-height: 1.6em;
+}
+
+.container p {
+  padding: .5em 0;
+}
+
+
+/* ----------------------------------------
+Buttons
+---------------------------------------- */
+.button-1 {
+  display: inline-block;
+  padding: .6em 1.5em;
+  font: 14px "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #212121;
+  background-color: transparent;
+  box-sizing: border-box;
+  transition: 200ms ease-out;
+  border-top: 2px solid #212121;
+  border-bottom: 2px solid #212121;
+}
+
+.button-1:hover {
+  background-color: #212121;
+  color: #fff;
+}
+
+.button-2 {
+  display: inline-block;
+  padding: .6em 1.5em;
+  font: 14px "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  box-sizing: border-box;
+  transition: 200ms ease-out;
+  border: 2px solid #fff;
+}
+
+.button-2:hover {
+  background-color: #fff;
+  color: #212121;
+}
+
+.button-2.alt { background-color: #fff; color: #212121; }
+.button-2.alt:hover { background-color: transparent; color: #fff; }
+
+
+/* ----------------------------------------
+Navbar
+To reset to normal, comment out .js-navbar.scroll styles and set position to absolute
+---------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: transparent;
+  box-shadow: none;
+  color: rgba(255,255,255,.7);
+  padding: 0 var(--section-padding);
+  transition: 200ms ease;
+  text-align: center;
+  z-index: 10;
+}
+
+.navbar a { text-decoration: none; color: inherit; }
+
+.navbar.scroll,
+#no-banner.navbar {
+  background-color: #fff;
+  color: #212121;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+}
+
+.nav-logo img {
+  height: calc(var(--navbar-height) / 2);
+  margin-top: calc(var(--navbar-height) / 6);
+  float: left;
+}
+
+.nav-buttons {
+  display: inline-block;
+  height: var(--navbar-height);
+  line-height: var(--navbar-height);
+  vertical-align: middle;
+  float: right;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 8px 1.5em;
+  border-radius: 28px;
+  font: 400 13px "Rubik", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.nav-btn.cta {background: var(--color-primary); color: #fff;}
+.nav-btn.cta:hover {background: var(--color-primary); color: #fff;}
+
+.nav-btn.active {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.navbar.scroll .nav-btn.active {
+  border: 1px solid #212121;
+  color: #212121;
+}
+
+.nav-btn:hover, .nav-icon:hover {color: #fff;}
+.navbar.scroll .nav-btn:hover, #no-banner.navbar .nav-btn:hover,
+.navbar.scroll .nav-icon:hover, #no-banner.navbar .nav-icon:hover{color: #666;}
+
+.nav-dropdown-btn {
+  position: relative;
+}
+
+.nav-dropdown-btn .nav-btn:hover {color: #666;}
+
+.nav-dropdown {
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  display: none;
+  padding: 4px .5em;
+  margin: 0 .5em;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #212121;
+  border-radius: 4px;
+  transition: 100ms ease;
+  z-index: 10;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+}
+
+.navbar.scroll .nav-dropdown,
+#no-banner.navbar .nav-dropdown {
+  top: 3.5em;
+}
+
+#no-banner.navbar ~ .navbar-spacer {
+  height: var(--navbar-height);
+}
+
+/* Add triangle to top */
+.nav-dropdown:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 5px;
+	margin-left: -30px;
+}
+
+.nav-dropdown a {
+  display: block;
+  line-height: 2em;
+}
+
+.nav-dropdown-btn:hover .nav-dropdown {
+  display: block;
+}
+
+.nav-icon i {
+  height: var(--navbar-height);
+  line-height: var(--navbar-height);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.nav-burger {display: none;}
+
+
+/* ----------------------------------------
+Grids
+---------------------------------------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* ---------- Site selection grid ---------- */
+.select-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  width: 100%;
+  height: 250px;
+  margin: 2rem 0;
+  align-items: center;
+  text-align: center;
+}
+
+.select-grid > a {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  color: #333;
+  border: 1px solid #eee;
+  box-shadow: 2px 4px 8px 0 rgba(0,0,0,.1);
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+.select-grid > a:hover {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,.15);
+}
+
+.select-grid > a > i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.select-grid > a > p {
+  position: absolute;
+  width: 100%;
+  bottom: 4rem;
+}
+
+
+/* ----------------------------------------
+Scroll down
+---------------------------------------- */
+.scr-down {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+}
+
+.scroll-down {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+.scroll-down i {
+  margin: -7px;
+  font-size: 30px;
+  animation: flashing 1s ease infinite alternate;
+}
+.scroll-down i:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.scroll-down i:last-child {
+  animation-delay: 0.6s;
+}
+@keyframes flashing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+
+/* ----------------------------------------
+Tags
+---------------------------------------- */
+.tag {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: #999;
+  font: 16px 'Rubik', sans-serif;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-3 > *:nth-child(3) {
+    display: none;
+  }
+}

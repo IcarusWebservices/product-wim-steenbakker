@@ -3,11 +3,14 @@ if(isset($data["active_id"])) {
     $active_id = $data["active_id"];
 } else $active_id = null;
 
-// var_dump($active_id);
-
 $menu = get_menu('main');
 
-foreach ($menu as $item) {
+foreach ($menu as $index=>$item) {
+    $active = NULL;
+
+    if ($index == $active_id) {
+        $active = ' active';
+    }
 
     if($item->hasSubItems()) {
         ?>
@@ -22,9 +25,7 @@ foreach ($menu as $item) {
                 foreach ($subs as $sub) {
                     ?>
 
-                    <div class="nav-btn">
-                        <a href="<?= ph_pattern($sub->links_to) ?>"><?= $sub->display_text ?></a>
-                    </div>
+                    <a class="nav-btn<?= $active ?>" href="<?= ph_pattern($sub->links_to) ?>"><?= $sub->display_text ?></a>
 
                     <?php
                 }
@@ -34,9 +35,7 @@ foreach ($menu as $item) {
         <?php
     } else {
         ?>
-        <div class="nav-btn">
-            <a href="<?= ph_pattern($item->links_to) ?>"><?= $item->display_text ?></a>
-        </div>
+        <a class="nav-btn<?= $active ?>" href="<?= ph_pattern($item->links_to) ?>"><?= $item->display_text ?></a>
         <?php
     }
 
