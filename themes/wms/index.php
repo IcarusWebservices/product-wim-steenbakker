@@ -127,7 +127,6 @@
         $this->requested_stylesheets = [
             request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/wms.css')),
             request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/components.css')),
-            request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/musicplayer.css'))
         ];
         $this->requested_header_scripts = [
             request_script('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'),
