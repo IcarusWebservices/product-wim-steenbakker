@@ -14,5 +14,5 @@
         get_template_part('menu.php', ["active_id" => $data["active_id"]]);
         ?>
     </div>
-    <div class="nav-burger"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></div>
+    <div class="nav-burger"><i class="fas fa-bars fa-lg" aria-hidden="true"></i></div>
 </nav>

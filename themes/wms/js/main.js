@@ -1,21 +1,107 @@
 const nav = document.querySelector('.navbar');
-// const parallaxImg = document.querySelectorAll('.img-parallax');
+const parallaxImg = document.querySelectorAll('.img-parallax');
+
+// Galleries
+const galleryImages = [].slice.call(document.querySelectorAll('.gallery > .photos-section > .photo-grid-container > div > img'), 0);
+const bodyOverlay = document.querySelector("#body-overlay");
+const modal = document.querySelector(".photo-overlay");
+const modalImg = document.getElementById("modal-photo");
+const modalPagination = document.getElementById("modal-pagination");
+const modalCloseSpan = document.getElementsByClassName("close-modal")[0];
+var galleryModalVisible = false;
+var currentPhotoIndex;
 
 window.onscroll = () => {
     this.scrollY <= 50 ? nav.classList.remove('scroll') : nav.classList.add('scroll');
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     if (this.scrollY <= 50) {
         nav.classList.add('scroll');
     }
 });
 
 
+
+// ------------------------------
+// Gallery
+// ------------------------------
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    // Up
+    if (e.keyCode === 38) {}
+    // Down
+    else if (e.keyCode === 40) {}
+    // Left
+    else if (e.keyCode === 37) {
+        if (galleryModalVisible) {
+
+            if (currentPhotoIndex === 1) {
+                currentPhotoIndex = galleryCount;
+            } else {
+                currentPhotoIndex--;
+            }
+
+            modalPhotoChange(gallerySrcFolder, gallerySrcShortcode, currentPhotoIndex);
+        }
+    }
+    // Right
+    else if (e.keyCode === 39) {
+        if (galleryModalVisible) {
+
+            if (currentPhotoIndex >= galleryCount) {
+                currentPhotoIndex = 1;
+            } else {
+                currentPhotoIndex++;
+            }
+
+            modalPhotoChange(gallerySrcFolder, gallerySrcShortcode, currentPhotoIndex);
+        }
+    }
+}
+
+function showGalleryModal(e) {
+    galleryModalVisible = true;
+    let image = e.target.querySelector('img');
+    currentPhotoIndex = image;
+    modal.style.display = "block";
+    modalImg.src = image.src;
+    console.log(galleryImages);
+    console.log(image);
+    console.log(galleryImages.indexOf(e.target));
+}
+
+function modalPhotoChange(srcFolder, srcShortcode, photoIndex) {
+    currentPhotoIndex = photoIndex;
+    galleryModalVisible = true;
+    modal.style.display = "block";
+    modalImg.src = "/sites/tnm/img/media/" + srcFolder + "/" + srcShortcode + photoIndex + ".jpg";
+    modalPagination.innerHTML = currentPhotoIndex + "/" + galleryCount;
+}
+
+function closeModal() {
+    galleryModalVisible = false;
+    modal.style.display = "none";
+}
+
+function stopProp(e) {
+    e.stopPropagation();
+}
+
+if (modalCloseSpan) {
+    modalCloseSpan.onclick = function () { closeModal(); };
+}
+
+
+
+
 // ------------------------------
 // Parallax scrolling!
 // ------------------------------
-/*
 $('.img-parallax').each(function () {
     var img = $(this);
     var imgParent = $(this).parent();
@@ -50,7 +136,6 @@ $('.img-parallax').each(function () {
         }
     });
 });
-*/
 
 
 // Music Player
