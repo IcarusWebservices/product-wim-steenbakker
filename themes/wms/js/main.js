@@ -41,46 +41,42 @@ function checkKey(e) {
         if (galleryModalVisible) {
 
             if (currentPhotoIndex === 1) {
-                currentPhotoIndex = galleryCount;
+                currentPhotoIndex = galleryImages.length;
             } else {
                 currentPhotoIndex--;
             }
 
-            modalPhotoChange(gallerySrcFolder, gallerySrcShortcode, currentPhotoIndex);
+            modalContentHandler(currentPhotoIndex);
         }
     }
     // Right
     else if (e.keyCode === 39) {
         if (galleryModalVisible) {
 
-            if (currentPhotoIndex >= galleryCount) {
+            if (currentPhotoIndex >= galleryImages.length) {
                 currentPhotoIndex = 1;
             } else {
                 currentPhotoIndex++;
             }
 
-            modalPhotoChange(gallerySrcFolder, gallerySrcShortcode, currentPhotoIndex);
+            modalContentHandler(currentPhotoIndex);
         }
     }
 }
 
-function showGalleryModal(e) {
+function modalHandler(e, index) {
+    // Show modal content
     galleryModalVisible = true;
-    let image = e.target.querySelector('img');
-    currentPhotoIndex = image;
+    currentPhotoIndex = galleryImages.indexOf(e.target.querySelector('img')) + 1;
     modal.style.display = "block";
-    modalImg.src = image.src;
-    console.log(galleryImages);
-    console.log(image);
-    console.log(galleryImages.indexOf(e.target));
+    modalContentHandler();
 }
 
-function modalPhotoChange(srcFolder, srcShortcode, photoIndex) {
-    currentPhotoIndex = photoIndex;
-    galleryModalVisible = true;
-    modal.style.display = "block";
-    modalImg.src = "/sites/tnm/img/media/" + srcFolder + "/" + srcShortcode + photoIndex + ".jpg";
-    modalPagination.innerHTML = currentPhotoIndex + "/" + galleryCount;
+function modalContentHandler(index) {
+    // Change modal content
+    console.log(currentPhotoIndex);
+    modalImg.src = galleryImages[currentPhotoIndex - 1].src;
+    modalPagination.innerHTML = currentPhotoIndex + "/" + galleryImages.length;
 }
 
 function closeModal() {

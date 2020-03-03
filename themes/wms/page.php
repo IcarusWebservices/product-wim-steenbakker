@@ -61,7 +61,7 @@ class WMS_SinglePage_Template extends PH_Template {
                                 foreach ($gallery_images as $image) {
                                     ?>
 
-                                    <div class="photo-grid-item" onclick="showGalleryModal(event)">
+                                    <div class="photo-grid-item" onclick="modalHandler(event)">
                                         <img class="photo" src="<?= $image ?>" alt="Image">
                                     </div>
 
