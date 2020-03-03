@@ -11,6 +11,11 @@
             "method": "page",
             "importance": 10,
             "checkerFunction": "checkpage"
+        },
+        "/contact": {
+            "controller": "wms_contact",
+            "method": "contact_form",
+            "importance": 100
         }
     },
     "editors": {
