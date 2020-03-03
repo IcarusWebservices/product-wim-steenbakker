@@ -13,12 +13,6 @@ class WMS_SinglePage_Template extends PH_Template {
             "has_navbar" => $this->has_navbar
         ]);
 
-        $records = PH_Query::records([
-            "==record_type" => "demopage",
-            "==record_status" => "published",
-            "==record_slug" => $input->slug
-        ]);
-
         $gallery_images = [
             'https://images.unsplash.com/photo-1583064908559-91ebdcea9fcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
             'https://images.unsplash.com/photo-1583067339189-4af195751579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80',
@@ -29,15 +23,15 @@ class WMS_SinglePage_Template extends PH_Template {
             'https://images.unsplash.com/photo-1583133269959-5495d073241e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
             'https://images.unsplash.com/photo-1576691438807-8a74e18a6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80',
         ];
-
-        if(count($records) > 0) {
-            $record = $records[0];
+        
+        if($input->__has('record')) {
+            $record = $input->record;
             ?>
 
             <header class="banner low">
                 <img src="https://jezz.tech/sites/wim/assets/img/cor_bakker_mythe.jpg" data-speed="-0.75" class="img-parallax">
                 <div class="banner-content abs-centered">
-                    <h1 class="title"><?= ucfirst($input->slug) ?></h1>
+                    <h1 class="title"><?= ucfirst($record->title) ?></h1>
                 </div>
             </header>
 
@@ -127,6 +121,6 @@ class WMS_SinglePage_Template extends PH_Template {
 
 }
 
-return export('demopage', [
+return export('wms_page', [
     "class" => "WMS_SinglePage_Template"
 ]);
