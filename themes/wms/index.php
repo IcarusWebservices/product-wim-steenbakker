@@ -48,7 +48,7 @@
                         <span class="tag">Over mij</span>
                         <h1 class="title">Hallo! Ik ben Wim Steenbakker</h1>
                         <br>
-                        <p>Dit is jouw korte praatje waarin je duidelijk kan maken wie je bent en wat je doet. Begin nog niet over acedemische prestaties en dergelijke, maar houd het familiair, kort en bondig. Klik hieronder om meer over mij te weten te komen!</p>
+                        <p><?= get_template_record('wms_index_hero_description', 'string', 'Dit is jouw korte praatje waarin je duidelijk kan maken wie je bent en wat je doet. Begin nog niet over acedemische prestaties en dergelijke, maar houd het familiair, kort en bondig. Klik hieronder om meer over mij te weten te komen!') ?></p>
                         <br><a class="button-1" href="/wim/over">Lees meer</a>
                     </div>
                 </div>
