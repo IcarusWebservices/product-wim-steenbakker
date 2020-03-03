@@ -30,11 +30,10 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, corrupti.</p>
                     <br>
                     <a class="button-2 alt" href="/wim/educatie">Meer over educatie</a>
-                    <a class="button-2" href="/wim/optredens">Meer over optredens</a>
+                    <a class="button-2" href="/wim/optreden">Meer over optredens</a>
                 </div>
             </div>
             <div class="scroll-down">
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </div>
@@ -42,73 +41,79 @@
 
         <main role="main">
             <section class="intro">
-                <img src="https://jezz.tech/sites/wim/assets/img/wim_pf_2.jpg" alt="Wim Steenbakker">
-                <div class="intro-text">
-                    <div>
-                        <span class="tag">Over mij</span>
-                        <h1 class="title">Hallo! Ik ben Wim Steenbakker</h1>
-                        <br>
-                        <p>Dit is jouw korte praatje waarin je duidelijk kan maken wie je bent en wat je doet. Begin nog niet over acedemische prestaties en dergelijke, maar houd het familiair, kort en bondig. Klik hieronder om meer over mij te weten te komen!</p>
-                        <br><a class="button-1" href="/wim/over">Lees meer</a>
+                <div class="section-content" data-aos="fade-right">
+                    <img src="https://jezz.tech/sites/wim/assets/img/wim_pf_2.jpg" alt="Wim Steenbakker">
+                    <div class="intro-text">
+                        <div>
+                            <span class="tag">Over mij</span>
+                            <h1 class="title">Hallo! Ik ben Wim Steenbakker</h1>
+                            <br>
+                            <p>Dit is jouw korte praatje waarin je duidelijk kan maken wie je bent en wat je doet. Begin nog niet over acedemische prestaties en dergelijke, maar houd het familiair, kort en bondig. Klik hieronder om meer over mij te weten te komen!</p>
+                            <br><a class="button-1" href="/wim/over">Lees meer</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="services">
-                <h1>Mijn diensten</h1>
-                <p>Van concerten tot bijles geven, ik kan het allemaal voor u doen! Klik op de kaarten hieronder voor meer informatie over de individuele diensten.</p>
-                <div class="grid-3">
-                    <a href="optreden">
-                        <img src="https://images.unsplash.com/photo-1465225314224-587cd83d322b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Optreden">
-                        <div class="overlay-content">
-                            <i class="fas fa-microphone-alt fa-3x"></i>
-                            <p><strong>Optreden</strong></p>
-                            <p>voor klassieke publieken</p>
-                        </div>
-                    </a>
-                    <a href="educatie">
-                        <img src="https://images.unsplash.com/photo-1536594527669-2f555de54e95?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Muziekles">
-                        <div class="overlay-content">
-                            <i class="fas fa-guitar fa-3x"></i>
-                            <p><strong>Muzieklessen</strong></p>
-                            <p>voor jong en oud!</p>
-                        </div>
-                    </a>
-                    <a href="educatie">
-                        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Muziekles">
-                        <div class="overlay-content">
-                            <i class="fas fa-calculator fa-3x"></i>
-                            <p><strong>Wiskunde bijles</strong></p>
-                            <p>voor iedereen</p>
-                        </div>
-                    </a>
+                <div class="section-content">
+                    <h1>Mijn diensten</h1>
+                    <p>Van concerten tot bijles geven, ik kan het allemaal voor u doen! Klik op de kaarten hieronder voor meer informatie over de individuele diensten.</p>
+                    <div class="grid-3">
+                        <a href="optreden">
+                            <img src="https://images.unsplash.com/photo-1465225314224-587cd83d322b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Optreden">
+                            <div class="overlay-content">
+                                <i class="fas fa-microphone-alt fa-3x"></i>
+                                <p><strong>Optreden</strong></p>
+                                <p>voor klassieke publieken</p>
+                            </div>
+                        </a>
+                        <a href="educatie">
+                            <img src="https://images.unsplash.com/photo-1536594527669-2f555de54e95?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Muziekles">
+                            <div class="overlay-content">
+                                <i class="fas fa-guitar fa-3x"></i>
+                                <p><strong>Muzieklessen</strong></p>
+                                <p>voor jong en oud!</p>
+                            </div>
+                        </a>
+                        <a href="educatie">
+                            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Muziekles">
+                            <div class="overlay-content">
+                                <i class="fas fa-calculator fa-3x"></i>
+                                <p><strong>Wiskunde bijles</strong></p>
+                                <p>voor iedereen</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
 
             <section class="reviews">
-                <h1>Wat klanten en leerlingen zeggen</h1>
-                <br>
-                <div class="grid-3">
-                    <div>
-                        <i class="fas fa-quote-right fa-2x"></i>
-                        <p><strong>Thomas de Jong</strong></p>
-                        <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptas similique cum porro fuga molestias!"</blockquote>
-                    </div>
-                    <div>
-                        <i class="fas fa-quote-right fa-2x"></i>
-                        <p><strong>Hendrik van der Zande</strong></p>
-                        <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptas similique cum porro fuga molestias!"</blockquote>
-                    </div>
-                    <div>
-                        <i class="fas fa-quote-right fa-2x"></i>
-                        <p><strong>Luuk Hesse</strong></p>
-                        <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptas similique cum porro fuga molestias!"</blockquote>
+                <div class="section-content">
+                    <h1>Wat klanten en leerlingen zeggen</h1>
+                    <br>
+                    <div class="grid-3">
+                        <div>
+                            <i class="fas fa-quote-right fa-2x"></i>
+                            <p><strong>Thomas de Jong</strong></p>
+                            <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptas similique cum porro fuga molestias!"</blockquote>
+                        </div>
+                        <div>
+                            <i class="fas fa-quote-right fa-2x"></i>
+                            <p><strong>Hendrik van der Zande</strong></p>
+                            <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptas similique cum porro fuga molestias!"</blockquote>
+                        </div>
+                        <div>
+                            <i class="fas fa-quote-right fa-2x"></i>
+                            <p><strong>Luuk Hesse</strong></p>
+                            <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptas similique cum porro fuga molestias!"</blockquote>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="contact">
-                <div class="contact-content">
+                <div class="section-content">
                     <p>Voor meer informatie, neem contact op met Wim Steenbakker.</p>
                     <a href="/wim/contact" class="button-2 alt">Neem contact op!</a>
                 </div>
@@ -127,16 +132,19 @@
         $this->requested_stylesheets = [
             request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/wms.css')),
             request_stylesheet(resource_resolve(RES_THEME, $theme_folder, '/css/components.css')),
+            request_stylesheet('https://unpkg.com/aos@next/dist/aos.css')
         ];
         $this->requested_header_scripts = [
             request_script('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'),
             request_script('https://kit.fontawesome.com/9d8cef91c5.js')
         ];
         $this->requested_body_scripts = [
+            request_script('https://unpkg.com/aos@next/dist/aos.js'),
+            request_script(resource_resolve(RES_THEME, $theme_folder, '/js/aos.js')),
             request_script(resource_resolve(RES_THEME, $theme_folder, '/js/main.js'))
         ];
         $this->requested_title = "Home - Wim Steenbakker";
-        $this->active_id = 0;
+        $this->active_id = 'index';
     }
 
 }
