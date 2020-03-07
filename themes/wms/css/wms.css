@@ -72,7 +72,7 @@ h1.title { font-size: 2em; }
 
 .img-parallax {
   position: absolute;
-  height: 100%;
+  height: 101%;
   width: 101%;
   object-fit: cover;
   top: 50%;
@@ -191,14 +191,6 @@ section.intro img {
 
 section.intro .intro-text {
   position: relative;
-  width: 100%;
-}
-
-section.intro .intro-text > div {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
 }
 

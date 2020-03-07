@@ -87,7 +87,7 @@ To reset to normal, comment out .js-navbar.scroll styles and set position to abs
 }
 
 .nav-buttons {
-  display: inline-block;
+  /*display: inline-block;*/
   height: var(--navbar-height);
   line-height: var(--navbar-height);
   vertical-align: middle;

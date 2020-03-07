@@ -41,7 +41,7 @@
 
         <main role="main">
             <section class="intro">
-                <div class="section-content" data-aos="fade-right">
+                <div class="section-content"><!-- <div class="section-content" data-aos="fade-right"> -->
                     <img src="https://jezz.tech/sites/wim/assets/img/wim_pf_2.jpg" alt="Wim Steenbakker">
                     <div class="intro-text">
                         <div>
