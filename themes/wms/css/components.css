@@ -351,26 +351,14 @@ Gallery
   color: #888;
 }
 
-.gallery .layout-tabs .tab.grid {
+.gallery .layout-tabs .tab.active {
   color: var(--color-primary);
 }
 
-
-.gallery .photo-grid-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  grid-gap: 1rem;
-}
-
-.gallery .photo-grid-item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
+/* ------------------------------
+Viewport types 
+------------------------------ */
+/* In common */
 .gallery .photo-grid-item::after {
   content: '';
   position: absolute;
@@ -382,15 +370,50 @@ Gallery
   opacity: 0;
   transition: 300ms ease;
 }
+.gallery .photo-grid-item:hover::after { opacity: .2; }
 
-.gallery .photo-grid-item:hover::after {
-  opacity: .2;
+/* ---------- Thumbnail view ---------- */
+.gallery .thumbnail-view {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-gap: 1rem;
 }
 
-.gallery .photo-grid-item > img {
+.gallery .thumbnail-view .photo-grid-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.gallery .thumbnail-view .photo-grid-item > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+/* ---------- Justified view ---------- */
+.gallery .justified-view {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 0;
+  grid-gap: 1rem;
+}
+
+.gallery .justified-view .photo-grid-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  grid-row-end: span 30;
+}
+
+.gallery .justified-view .photo-grid-item > img {
+  overflow: hidden;
+  max-width: 100%;
 }
 
 

@@ -1,8 +1,12 @@
 const nav = document.querySelector('.navbar');
 const parallaxImg = document.querySelectorAll('.img-parallax');
+const galleryThumbnailBtn = document.querySelector('a.tab.grid');
+const galleryJustifiedBtn = document.querySelector('a.tab.justified');
+const galleryPhotoGrid = document.querySelector('.photo-grid-container');
 
 // Galleries
-const galleryImages = [].slice.call(document.querySelectorAll('.gallery > .photos-section > .photo-grid-container > div > img'), 0);
+const galleryImages = [].slice.call(document.querySelectorAll('.gallery .photo-grid-container > div > img'), 0);
+const galleryGridItems = [].slice.call(document.querySelectorAll('.photo-grid-item'), 0);
 const bodyOverlay = document.querySelector("#body-overlay");
 const modal = document.querySelector(".photo-overlay");
 const modalImg = document.getElementById("modal-photo");
@@ -18,6 +22,28 @@ window.onscroll = () => {
 document.addEventListener('DOMContentLoaded', function () {
     if (this.scrollY <= 50) {
         nav.classList.add('scroll');
+    }
+});
+
+galleryThumbnailBtn.addEventListener('click', () => {
+    if (!galleryPhotoGrid.classList.contains('thumbnail-view')) {
+        galleryPhotoGrid.classList.remove('justified-view');
+        galleryPhotoGrid.classList.add('thumbnail-view');
+        galleryGridItems.forEach((el) => {
+            el.removeAttribute('style');
+        });
+        galleryThumbnailBtn.classList.add('active');
+        galleryJustifiedBtn.classList.remove('active');
+    }
+});
+
+galleryJustifiedBtn.addEventListener('click', () => {
+    if (!galleryPhotoGrid.classList.contains('justified-view')) {
+        galleryPhotoGrid.classList.remove('thumbnail-view');
+        galleryPhotoGrid.classList.add('justified-view');
+        resizeAllMasonryItems();
+        galleryJustifiedBtn.classList.add('active');
+        galleryThumbnailBtn.classList.remove('active');
     }
 });
 
@@ -91,6 +117,46 @@ function stopProp(e) {
 if (modalCloseSpan) {
     modalCloseSpan.onclick = function () { closeModal(); };
 }
+
+
+// Justified view sizes
+function resizeMasonryItem(item) {
+    var grid = document.getElementsByClassName('photo-grid-container')[0],
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+
+    var rowSpan = Math.ceil((item.querySelector('.photo-grid-item > img').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap) - 1);
+
+    item.style.gridRowEnd = 'span ' + rowSpan;
+}
+
+
+function resizeAllMasonryItems() {
+    var allItems = document.getElementsByClassName('photo-grid-item');
+
+    for (var i = 0; i < allItems.length; i++) {
+        resizeMasonryItem(allItems[i]);
+    }
+}
+
+function waitForImages() {
+    var allItems = document.getElementsByClassName('photo-grid-item');
+    for (var i = 0; i < allItems.length; i++) {
+        imagesLoaded(allItems[i], function (instance) {
+            var item = instance.elements[0];
+            resizeMasonryItem(item);
+        });
+    }
+}
+
+
+var masonryEvents = ['load', 'resize'];
+masonryEvents.forEach(function (event) {
+    window.addEventListener(event, resizeAllMasonryItems);
+});
+
+resizeAllMasonryItems();
+
 
 
 

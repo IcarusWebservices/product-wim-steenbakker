@@ -20,8 +20,7 @@ class WMS_SinglePage_Template extends PH_Template {
             'https://images.unsplash.com/photo-1583071656098-20db4cc7a1e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80',
             'https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
             'https://images.unsplash.com/photo-1583132648365-db96e1ea0c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-            'https://images.unsplash.com/photo-1583133269959-5495d073241e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-            'https://images.unsplash.com/photo-1576691438807-8a74e18a6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80',
+            'https://images.unsplash.com/photo-1583133269959-5495d073241e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
         ];
         
         if($input->__has('record')) {
@@ -47,7 +46,7 @@ class WMS_SinglePage_Template extends PH_Template {
                             <header class="photos-section-header">
                             
                             <div class="layout-tabs">
-                                <a role="button" class="tab grid" title="Thumbnail view">
+                                <a role="button" class="tab grid active" title="Thumbnail view">
                                     <i class="fas fa-th" aria-hidden="true"></i>
                                 </a>
                                 <a role="button" class="tab justified" title="Justified view">
@@ -56,7 +55,7 @@ class WMS_SinglePage_Template extends PH_Template {
                             </div>
                             </header>
                             
-                            <div class="photo-grid-container">
+                            <div class="photo-grid-container thumbnail-view">
                                 <?php
                                 foreach ($gallery_images as $image) {
                                     ?>
@@ -68,12 +67,6 @@ class WMS_SinglePage_Template extends PH_Template {
                                     <?php
                                 }
                                 ?>
-                                <!--
-                                <div class="view photo-grid-item forced-aspect-ratio">
-                                    <div class="photo" style="background-image: url(/sites/tnm/img/media/opherfst2019/opherfst2.jpg);" onclick="modalPhotoChange('opherfst2019', 'opherfst', 2)"></div>
-                                    <div class="photo-sub"></div>
-                                </div>
-                                -->
                             </div>
                         </section>
 
