@@ -20,10 +20,13 @@ window.onscroll = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    if (this.scrollY <= 50) {
+    if (window.scrollY >= 50) {
         nav.classList.add('scroll');
     }
 });
+
+
+
 
 galleryThumbnailBtn.addEventListener('click', () => {
     if (!galleryPhotoGrid.classList.contains('thumbnail-view')) {
