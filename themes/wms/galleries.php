@@ -23,7 +23,7 @@ class WMS_GalleriesOverview_Template extends PH_Template {
             'https://images.unsplash.com/photo-1583133269959-5495d073241e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
         ];
         
-        if($input->__has('record')) {
+        if($input->__has('galleries')) {
             $record = $input->record;
             ?>
 
