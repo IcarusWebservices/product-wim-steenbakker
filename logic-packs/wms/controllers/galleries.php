@@ -9,7 +9,7 @@ class WMS_Galleries_Controller {
     public function overview($parameters) {
         global $q_site;
         
-        $template = PH_Loader::requestTemplate("wms_gallery_overview");
+        $template = PH_Loader::requestTemplate("wms_galleries_overview");
         
         $galleries = PH_Query::records([
           "==site" => $q_site,
