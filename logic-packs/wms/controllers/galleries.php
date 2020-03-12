@@ -16,16 +16,12 @@ class WMS_Galleries_Controller {
           "==record_type" => "wms_gallery",
           "==record_status" => "published"
         ]);
-        
-        if(count($galleries)>0) {
-          $template->addData([
+
+        $template->addData([
             "galleries" => $galleries
-          ]);
-          
-          return $template;
-        } else {
-          return 404;
-        }
+        ]);
+
+        return $template;
     }
 
 }
