@@ -16,6 +16,11 @@
             "controller": "wms_contact",
             "method": "contact_form",
             "importance": 100
+        },
+        "/galleries": {
+            "controller": "wms_galleries",
+            "method": "overview",
+            "importance": 100
         }
     },
     "editors": {
