@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Wim Steenbakker Website
  * Index template
@@ -6,7 +7,8 @@
  * @copyright IcarusWebservices
  * @license Licensed to Wim Steenbakker
  */
- class WMS_Index_Template extends PH_Template {
+class WMS_Index_Template extends PH_Template
+{
 
     public function render($input)
     {
@@ -14,13 +16,13 @@
         // $header_image = 'http://wimsteenbakker.nl/wp-content/uploads/2012/08/Foto-met-alles-5-e1488409976753.jpg';
         $header_image = 'https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80';
 
-        // $header_image = resource_resolve(RES_THEME, $theme_folder, '/img/afstandsleren.jpg');
+        // $header_image = resource_resolve(RES_THEME, $theme_folder, '/img/skypelessen.jpg');
 
         get_template_part('header.php', [
             "active_id" => $this->active_id
         ]);
 
-        ?>
+?>
 
         <header class="banner">
             <img src="<?= $header_image ?>" data-speed="-0.75" class="img-parallax" style="top: 45.8331%; transform: translate(-50%, -45.8331%);">
@@ -43,7 +45,8 @@
 
         <main role="main">
             <section class="intro">
-                <div class="section-content"><!-- <div class="section-content" data-aos="fade-right"> -->
+                <div class="section-content">
+                    <!-- <div class="section-content" data-aos="fade-right"> -->
                     <img src="https://jezz.tech/sites/wim/assets/img/wim_pf_2.jpg" alt="Wim Steenbakker">
                     <div class="intro-text">
                         <div>
@@ -121,11 +124,10 @@
                 </div>
             </section>
         </main>
-        
-        <?php
+
+<?php
 
         get_template_part('footer.php', []);
-
     }
 
     public function __construct()
@@ -148,7 +150,6 @@
         $this->requested_title = "Home - Wim Steenbakker";
         $this->active_id = 'index';
     }
-
 }
 
 return export('wms_index', [
