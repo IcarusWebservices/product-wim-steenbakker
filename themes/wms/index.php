@@ -14,6 +14,8 @@
         // $header_image = 'http://wimsteenbakker.nl/wp-content/uploads/2012/08/Foto-met-alles-5-e1488409976753.jpg';
         $header_image = 'https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80';
 
+        // $header_image = resource_resolve(RES_THEME, $theme_folder, '/img/afstandsleren.jpg');
+
         get_template_part('header.php', [
             "active_id" => $this->active_id
         ]);
@@ -60,7 +62,7 @@
                     <h1>Meer te weten komen over Wim?</h1>
                     <p>Van concerten geven tot bijles geven, ik kan het allemaal voor u doen! Klik op de kaarten hieronder voor meer informatie.</p>
                     <div class="grid-3">
-                        <a href="optreden">
+                        <a href="/wim/optreden">
                             <img src="https://images.unsplash.com/photo-1465225314224-587cd83d322b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Optreden">
                             <div class="overlay-content">
                                 <i class="fas fa-microphone-alt fa-3x"></i>
@@ -68,7 +70,7 @@
                                 <p>voor klassieke publieken</p>
                             </div>
                         </a>
-                        <a href="educatie">
+                        <a href="/wim/educatie">
                             <img src="https://images.unsplash.com/photo-1536594527669-2f555de54e95?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Muziekles">
                             <div class="overlay-content">
                                 <i class="fas fa-guitar fa-3x"></i>
@@ -76,7 +78,7 @@
                                 <p>voor jong en oud!</p>
                             </div>
                         </a>
-                        <a href="educatie">
+                        <a href="/wim/educatie">
                             <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Muziekles">
                             <div class="overlay-content">
                                 <i class="fas fa-calculator fa-3x"></i>
