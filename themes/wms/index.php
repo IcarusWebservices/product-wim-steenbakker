@@ -25,7 +25,7 @@
             <div class="banner-content masthead abs-centered fade-in">
                 <div>
                     <p class="subtitle">Wim Steenbakker</p>
-                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <h1 class="title">Muziekeducatie dat werkt.</h1>
                     <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, corrupti.</p>
                     <br>
@@ -57,8 +57,8 @@
 
             <section class="services">
                 <div class="section-content">
-                    <h1>Mijn diensten</h1>
-                    <p>Van concerten tot bijles geven, ik kan het allemaal voor u doen! Klik op de kaarten hieronder voor meer informatie over de individuele diensten.</p>
+                    <h1>Meer te weten komen over Wim?</h1>
+                    <p>Van concerten geven tot bijles geven, ik kan het allemaal voor u doen! Klik op de kaarten hieronder voor meer informatie.</p>
                     <div class="grid-3">
                         <a href="optreden">
                             <img src="https://images.unsplash.com/photo-1465225314224-587cd83d322b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Optreden">

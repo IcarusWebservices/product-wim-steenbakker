@@ -35,7 +35,7 @@ class WMS_SinglePage_Template extends PH_Template {
             </header>
 
             <main>
-                <section>
+                <section style="display: none;">
                     <div class="gallery">
                         <section class="details-section">
                             <h1 class="heading">Gallery title!</h1>
